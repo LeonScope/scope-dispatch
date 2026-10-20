@@ -32,7 +32,11 @@ The solver favors urgent work and then job coverage over small travel savings. S
 
 ## The interface follows the decision
 
-The job list, map and timeline are linked. Selecting a job opens its requirements and the checks supporting its assignment. Route colors follow the technician throughout the interface.
+The planning board sits at the top of the workspace. Graphite surfaces, lime accents and a prominent date give it a different identity from my other portfolio applications. Text navigation leads to the team briefing and change journal.
+
+The job list, map and timeline are linked. Selecting a job updates its requirements and the checks supporting its assignment. Route colors follow the technician throughout the interface. Below the schedule, a dark route atlas sits beside a light order desk. On smaller screens these sections stack, while the wide timeline scrolls within its own area.
+
+![Linked route atlas and order desk in the working application](../assets/dispatch-route-desk.jpg)
 
 Dragging a job onto a different technician constrains who should perform it. It does not set an exact arrival time from the drop position. The application proposes times that fit the remaining constraints.
 

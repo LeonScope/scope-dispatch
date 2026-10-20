@@ -32,7 +32,11 @@ Die Suche priorisiert dringende Aufträge und anschließend die Zahl der eingepl
 
 ## Die Oberfläche unterstützt die Entscheidung
 
-Auftragsliste, Karte und Zeitachse sind verbunden. Bei Auswahl eines Auftrags erscheinen seine Anforderungen und die geprüften Bedingungen. Die Farbe einer Fachkraft bleibt in Karte und Tagesplanung gleich.
+Die Plantafel steht oben im Arbeitsbereich. Graphittöne, Limettengrün und das große Datum geben dem Projekt eine eigene Gestaltung. Über die beschriftete Navigation gelangt man zum Tagesbriefing des Teams und zum Änderungsjournal.
+
+Auftragsliste, Karte und Zeitachse sind verbunden. Bei Auswahl eines Auftrags erscheinen seine Anforderungen und die geprüften Bedingungen. Die Farbe einer Fachkraft bleibt in Karte und Tagesplanung gleich. Unter der Plantafel stehen der dunkle Routenatlas und ein heller Auftragsdesk. Auf kleineren Bildschirmen erscheinen sie untereinander; die breite Zeitachse lässt sich innerhalb ihres Bereichs horizontal verschieben.
+
+![Verbundener Routenatlas und Auftragsdesk in der bedienbaren Anwendung](../assets/dispatch-route-desk.jpg)
 
 Wird ein Auftrag auf eine andere Technikerzeile gezogen, legt das die gewünschte Person fest. Die genaue Position beim Ablegen bestimmt keine Uhrzeit. Die Anwendung berechnet passende Ankunftszeiten für den neuen Vorschlag.
 

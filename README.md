@@ -8,7 +8,9 @@ Scope Dispatch is a local planning application for a fictional technical service
 
 I developed it with Codex to explore a different part of industrial software: organizing the people who maintain cameras, robots and production equipment.
 
-![Scope Dispatch: service routes, job details and the team's daily schedule](assets/dispatch-overview.jpg)
+![Scope Dispatch: the graphite and lime planning board, route atlas and order desk](assets/dispatch-overview.jpg)
+
+The team schedule takes the main space. Arrivals, journeys and breaks sit on one timeline; the route atlas and a light order desk provide the detail below. I chose this layout so a dispatcher can follow the day before looking at an individual job.
 
 ## Follow a change through the plan
 
@@ -37,7 +39,7 @@ The recorded normal-day comparison scheduled all 20 jobs with both methods. Tota
 
 These are measurements from the fictional dataset. They are not customer savings or a claim that the schedule is globally optimal. Search results can vary with available processing time.
 
-**36 automated tests passed.** Six local-model examples also matched all 24 expected structured fields after validation. That small regression set does not establish general language-model accuracy. The [verification notes](docs/VERIFICATION.md) include the comparison table, browser checks, model mistakes found during development and remaining limitations.
+**37 automated tests passed.** Six local-model examples also matched all 24 expected structured fields after validation. That small regression set does not establish general language-model accuracy. The [verification notes](docs/VERIFICATION.md) include the comparison table, browser checks, model mistakes found during development and remaining limitations.
 
 ## Presentation only
 

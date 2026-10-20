@@ -8,7 +8,9 @@ Scope Dispatch ist eine lokale Anwendung zur Einsatzplanung für ein fiktives te
 
 Ich habe das Projekt mit Codex entwickelt, um einen weiteren Bereich industrieller Software aufzugreifen: die Organisation der Menschen, die Kamerasysteme, Roboter und Fertigungsanlagen betreuen.
 
-![Scope Dispatch mit Servicerouten, Auftragsdetails und Tagesplanung](assets/dispatch-overview.jpg)
+![Scope Dispatch mit Plantafel in Graphit und Limettengrün, Routenatlas und hellem Auftragsdesk](assets/dispatch-overview.jpg)
+
+Die Tagesplanung nimmt den größten Raum ein. Ankünfte, Fahrten und Pausen stehen auf einer gemeinsamen Zeitachse; Karte und Auftragsdetails folgen darunter. Mir war wichtig, zuerst den Ablauf des Teams zu sehen und danach den einzelnen Einsatz genauer anzusehen.
 
 ## Eine Änderung durch den Plan verfolgen
 
@@ -37,7 +39,7 @@ Im aufgezeichneten Vergleich für den normalen Tag planen beide Verfahren alle 2
 
 Diese Werte stammen aus dem fiktiven Datensatz. Sie sind keine Einsparungen bei einem Kunden und kein Nachweis für den bestmöglichen Plan. Die Suche ist zeitlich begrenzt; ihre Ergebnisse können mit der verfügbaren Rechenzeit variieren.
 
-**36 automatisierte Tests sind bestanden.** Bei sechs Anfragen an das lokale Modell stimmen nach der Validierung außerdem alle 24 erwarteten strukturierten Felder. Diese kleine Prüfung erlaubt keine allgemeine Aussage zur Modellgenauigkeit. Die [Prüfdokumentation](docs/VERIFICATION.md) enthält die Vergleiche, Browserprüfungen, während der Entwicklung gefundene Modellfehler und die Grenzen der Demo.
+**37 automatisierte Tests sind bestanden.** Bei sechs Anfragen an das lokale Modell stimmen nach der Validierung außerdem alle 24 erwarteten strukturierten Felder. Diese kleine Prüfung erlaubt keine allgemeine Aussage zur Modellgenauigkeit. Die [Prüfdokumentation](docs/VERIFICATION.md) enthält die Vergleiche, Browserprüfungen, während der Entwicklung gefundene Modellfehler und die Grenzen der Demo.
 
 ## Nur die Präsentation ist öffentlich
 

@@ -18,7 +18,7 @@ These are observed runs, not a guaranteed improvement, a global-optimum certific
 
 ## Automated tests
 
-**36 tests passed.** The suite checks:
+**37 tests passed.** The suite checks:
 
 - Exact job coverage, no duplicate visits, qualified assignments and absence handling.
 - Arrival windows, travel between successive appointments, duration, lunch at the base and return before shift end.
@@ -31,6 +31,7 @@ These are observed runs, not a guaranteed improvement, a global-optimum certific
 - Rejecting absence when it conflicts with a locked appointment and preventing duplicate emergency jobs.
 - Intake field validation, unsupported model numbers, ungrounded skill suggestions, missing models and incomplete responses.
 - Local HTTP state loading, origin/host checks, invalid JSON and denial of source/database paths.
+- The JSON export is delivered as an attachment, contains the saved plan and does not change that plan.
 
 The solver output has its own acceptance validator. The test suite also asserts timing and skill invariants directly, rather than only calling that validator.
 
@@ -49,11 +50,13 @@ The application checks numeric support and verbatim evidence. Skill suggestions 
 
 ## Browser checks and recordings
 
-The working application was operated in the local browser. Checks covered proposal acceptance and discard, an urgent job with an existing fixed appointment, a subsequent absence, an invalid skill assignment, an actual drag onto another technician's row, local AI intake through a completed planning proposal, the technician view, history and JSON export.
+The refreshed interface was operated in the local browser. Checks covered proposal acceptance and discard, an urgent job with an existing fixed appointment, a subsequent absence, an invalid skill assignment, an actual drag onto another technician's row, local AI intake through a completed planning proposal, the technician view and history. Search, route filters, map zoom and linked appointment selection were also checked.
 
-The downloaded export was validated against the scheduling rules. Saved state survived application restarts. A 390 px viewport was checked for responsive layout; the wide timeline remains horizontally scrollable within its own panel. The browser reported no captured console warnings or errors during the final check.
+The layout was checked at 390, 900, 1024 and 1280 px viewport widths. The timeline remains horizontally scrollable within its own panel, including by keyboard. The request form was adjusted so its completion controls fit a 720 px tall desktop viewport. At intermediate widths, the map and order desk now stack. The browser reported no captured application console warnings or errors during the check.
 
-The MP4 is an approximately 22-second capture of actual browser interaction at normal speed. The GIF is a lower-frame-rate preview of that same recording. Screenshots are taken from the application. They are not proposed interface mockups.
+Saved state survived an application restart. A fresh export retrieved from the local HTTP endpoint contained the accepted 21-job plan and passed the scheduling validator. The endpoint supplies a download filename, and the interface uses a direct download link. Completion of the file-save handoff in the embedded browser could not be confirmed through browser automation; that part remains unverified.
+
+The MP4 is an approximately 27-second capture of actual browser interaction at normal speed: the normal day, an urgent job, a staff absence, the route atlas and the confirmed technician briefing. The GIF is a lower-frame-rate preview of that same recording. All four screenshots show the working application with the new design.
 
 ## Scope limits
 
@@ -69,12 +72,14 @@ The MP4 is an approximately 22-second capture of actual browser interaction at n
 
 ## Deutsch
 
-Am **20. Oktober 2026** wurden lokal **36 automatisierte Tests** bestanden. Die Tabelle oben vergleicht die Planung nach Eingangsreihenfolge mit der zeitlich begrenzten Suche auf jeweils denselben Aufträgen und Bedingungen.
+Am **20. Oktober 2026** wurden lokal **37 automatisierte Tests** bestanden. Die Tabelle oben vergleicht die Planung nach Eingangsreihenfolge mit der zeitlich begrenzten Suche auf jeweils denselben Aufträgen und Bedingungen.
 
 Im normalen Szenario planen beide Verfahren alle 20 Einsätze ein; die Fahrtzeit beträgt 640 beziehungsweise 468 Minuten. Mit Eilauftrag und Personalausfall schafft die Suche 21 von 21 Aufträgen, das Ausgangsverfahren 19 von 21. Die Werte stammen aus einer fiktiven Region mit festen Fahrtzeiten. Sie belegen weder reale Kundeneinsparungen noch einen global optimalen Plan.
 
 Sechs Anfragen an das lokale KI-Modell ergaben nach der Validierung 24 passende strukturierte Felder. Bezeichnung und Belegzitat gehören nicht zu dieser Wertung. Die Beispiele wurden während der Entwicklung festgelegt und sind kein unabhängiger Genauigkeitstest. Gefundene Fehler bei Zeitfenstern und unbelegten Fachgebieten führten zu präziseren Feldbeschreibungen und zusätzlichen Prüfungen. Eine persönliche Kontrolle bleibt erforderlich.
 
-Im Browser wurden die Übernahme und das Verwerfen von Vorschlägen, Eilauftrag, feste Zusage, Personalausfall, ungültige Zuordnung, tatsächliches Ziehen auf eine Technikerzeile, KI-Erfassung, Technikeransicht, Verlauf und Export geprüft. Der heruntergeladene Plan wurde nochmals gegen die Planungsregeln validiert. Die gespeicherten Daten blieben nach Neustarts erhalten.
+Im Browser wurden die Übernahme und das Verwerfen von Vorschlägen, Eilauftrag, feste Zusage, Personalausfall, ungültige Zuordnung, tatsächliches Ziehen auf eine Technikerzeile, KI-Erfassung, Technikeransicht und Verlauf geprüft. Dazu kamen Suche, Kartenfilter, Zoom und die verknüpfte Auswahl. Die neue Oberfläche wurde bei 390, 900, 1024 und 1280 Pixel Breite kontrolliert. Die Zeitachse lässt sich auch per Tastatur horizontal bedienen. Das Anfrageformular passt nun vollständig in ein 720 Pixel hohes Desktopfenster.
 
-Die etwa 22 Sekunden lange Aufnahme zeigt die echte Anwendung in normaler Geschwindigkeit. Die GIF-Vorschau verwendet dieselbe Aufnahme mit geringerer Bildrate. Der Quellcode, die Datenbank, lokale Modelle und vollständigen Testartefakte werden nicht veröffentlicht.
+Die gespeicherten Daten blieben nach dem Neustart erhalten. Ein frisch über den lokalen Export-Endpunkt abgerufener Plan mit 21 Aufträgen wurde gegen die Planungsregeln validiert. Die Anwendung bietet ihn über einen direkten Download-Link mit Dateinamen an. Der Abschluss des Speichervorgangs im eingebetteten Browser ließ sich automatisiert nicht bestätigen und bleibt ungeprüft.
+
+Die etwa 27 Sekunden lange Aufnahme zeigt die echte Anwendung in normaler Geschwindigkeit. Die GIF-Vorschau verwendet dieselbe Aufnahme mit geringerer Bildrate. Vier neue Screenshots zeigen Plantafel, Routenatlas mit Auftragsdesk, KI-Erfassung und Tagesbriefing. Der Quellcode, die Datenbank, lokale Modelle und vollständigen Testartefakte werden nicht veröffentlicht.
